@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FirstPage from "../components/firstPage";
 import TestPage from "../components/testPage";
+import ResultPage from "../components/resultPage";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: "/test/:number",
     element: <TestPage />,
+  },
+  {
+    path: "/test/result",
+    element: <ResultPage />,
   },
 ]);
 const Router: React.FC = () => {

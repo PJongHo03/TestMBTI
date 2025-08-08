@@ -1,6 +1,6 @@
 import * as S from "./first-page.styles";
 import CardGroup from "./Card/Card-Group";
-import { Send } from "lucide-react";
+
 import StartButton from "./StartButton/Start-Button";
 
 export default function FirstPage() {
