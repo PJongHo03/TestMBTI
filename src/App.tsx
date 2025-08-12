@@ -1,9 +1,13 @@
 import "./App.css";
-import FirstPage from "./components/firstPage";
 import Router from "./router";
+import MbtiProvider from "./store/mbti-context";
 
 function App() {
-  return <Router />;
+  return (
+    <MbtiProvider>
+      <Router />
+    </MbtiProvider>
+  );
 }
 
 export default App;
