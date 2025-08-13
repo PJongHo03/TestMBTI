@@ -31,6 +31,7 @@ export const Circle = styled.div<CircleProps>`
 export const Icon = styled.div<IconBoxProps>`
   svg {
     display: block;
+    width: ${(porps) => porps.iconSize}px;
     height: ${(porps) => porps.iconSize}px;
     color: #ffffff;
   }
