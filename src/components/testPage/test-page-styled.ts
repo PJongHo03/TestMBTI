@@ -12,9 +12,34 @@ export const Background = styled.div`
   flex-direction: column;
 `;
 
+export const Header = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 80px;
+  color: #818181;
+`;
+
 export const AnswerButton = styled.button`
   border-radius: 10px;
-  width: 200px;
+  width: 180px;
   margin-top: 10px;
-  height: 40px;
+  height: 44px;
+  color: #ffffff;
+  border: none;
+  font-size: 24px;
+  font-weight: bolder;
+  background: linear-gradient(to right, #8578f7, #3d9df6);
+
+  &:hover {
+    transform: scale(1.2);
+    background: linear-gradient(to left, #8578f7, #3d9df6);
+  }
+`;
+
+export const Question = styled.h1`
+  padding-bottom: 80px;
 `;

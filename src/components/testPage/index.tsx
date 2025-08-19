@@ -4,6 +4,8 @@ import { useState, useEffect, useContext } from "react";
 import { mbtiData } from "../../data";
 import { ContextMBTI } from "../../store/mbti-context";
 
+import BrainIcon from "../../icon/BrainIcon";
+import { Brain } from "lucide-react";
 const TestPage: React.FC = () => {
   const { checkedMBTI, handleCheck } = useContext(ContextMBTI);
   const [current, setCurrent] = useState<number>(0);
@@ -33,11 +35,11 @@ const TestPage: React.FC = () => {
 
   return (
     <S.Background>
-      <div>
+      <S.Header>
+        <BrainIcon width={65} height={65} iconSize={35} icon={<Brain />} />
         {current + 1}/{testLength}
-      </div>
-
-      <h1>{q.mbtiQuestion}</h1>
+      </S.Header>
+      <S.Question>{q.mbtiQuestion}</S.Question>
       <S.AnswerButton onClick={() => handleAnswerClick(q.yes)}>
         네
       </S.AnswerButton>

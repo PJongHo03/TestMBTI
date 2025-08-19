@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Brain } from "lucide-react";
 
 export const Title = styled.h1`
   font-size: 32px;
@@ -27,22 +26,6 @@ export const Background = styled.div`
   justify-content: center; // 가로 가운데
   align-items: center; // 세로 가운데
   flex-direction: column;
-`;
-
-export const Circle = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center; // 가로 가운데
-  align-items: center; // 세로 가운데
-  background: linear-gradient(to bottom right, #8578f7, #3d9df6);
-`;
-
-export const BrainIcon = styled(Brain)`
-  color: #ffffff;
-  width: 45px;
-  height: 45px;
 `;
 
 export const Header = styled.header`
