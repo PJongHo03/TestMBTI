@@ -2,7 +2,6 @@ import * as S from "./first-page.styles";
 import CardGroup from "./Card/Card-Group";
 import { ArrowRight } from "lucide-react";
 
-import StartButton from "./StartButton/Start-Button";
 import BrainIcon from "../../icon/BrainIcon";
 import { Brain } from "lucide-react";
 import LoadingAni from "../loading";
