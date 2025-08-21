@@ -1,3 +1,5 @@
+import LoadingAni from "../loading";
+
 export default function ResultPage() {
-  return <h1>결과</h1>;
+  return <LoadingAni />;
 }

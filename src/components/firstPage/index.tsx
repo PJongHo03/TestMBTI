@@ -1,11 +1,28 @@
 import * as S from "./first-page.styles";
 import CardGroup from "./Card/Card-Group";
+import { ArrowRight } from "lucide-react";
 
 import StartButton from "./StartButton/Start-Button";
 import BrainIcon from "../../icon/BrainIcon";
 import { Brain } from "lucide-react";
+import LoadingAni from "../loading";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function FirstPage() {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClickButton = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      navigate(`/test/0`);
+    }, 3000);
+  };
+
+  if (loading) return <LoadingAni />;
+
   return (
     <S.Background>
       <S.Header>
@@ -18,7 +35,9 @@ export default function FirstPage() {
         <CardGroup />
       </S.Section>
 
-      <StartButton />
+      <S.StartButton onClick={handleClickButton}>
+        테스트 시작하기 <ArrowRight />
+      </S.StartButton>
     </S.Background>
   );
 }
