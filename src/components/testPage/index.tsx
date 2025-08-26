@@ -1,43 +1,96 @@
 import { useParams, useNavigate } from "react-router-dom";
-import * as S from "./test-page-styled";
 import { useState, useEffect, useContext } from "react";
 import { mbtiData } from "../../data";
 import { ContextMBTI } from "../../store/mbti-context";
-
 import BrainIcon from "../../icon/BrainIcon";
 import { Brain } from "lucide-react";
+import LoadingAni from "../loading";
+import * as S from "./test-page-styled";
+
+type score = {
+  energy: number;
+  information: number;
+  decision: number;
+  lifeStyle: number;
+};
+
+type key = "energy" | "information" | "decision" | "lifeStyle";
+
+const letterToKey: Record<string, key> = {
+  E: "energy",
+  I: "energy",
+  N: "information",
+  S: "information",
+  F: "decision",
+  T: "decision",
+  P: "lifeStyle",
+  J: "lifeStyle",
+};
+
+const letterToValue: Record<string, number> = {
+  E: +1,
+  I: -1,
+  N: +1,
+  S: -1,
+  F: +1,
+  T: -1,
+  P: +1,
+  J: -1,
+};
+
 const TestPage: React.FC = () => {
-  const { checkedMBTI, handleCheck } = useContext(ContextMBTI);
+  const { handleCheck, handleMbtiResult } = useContext(ContextMBTI);
   const [current, setCurrent] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const [scores, setScores] = useState<score>({
+    energy: 0,
+    information: 0,
+    decision: 0,
+    lifeStyle: 0,
+  });
+
   const { number } = useParams();
   const navigate = useNavigate();
 
   const q = mbtiData[current];
 
-  const testLength = mbtiData.length;
-
   useEffect(() => {
     if (number !== undefined) {
       setCurrent(Number(number));
     }
-    console.log("현재값" + current);
   }, [number, current, navigate]);
 
-  const handleAnswerClick = (value: string) => {
-    handleCheck(value);
+  const handleAnswerClick = (input: string) => {
+    handleCheck(input);
+    const key = letterToKey[input];
+    const value = letterToValue[input];
+
+    const nextScore = {
+      ...scores,
+      [key]: scores[key] + value,
+    };
+
+    setScores(nextScore);
 
     if (current >= 20) {
-      navigate(`/test/result`);
+      handleMbtiResult(nextScore);
+      setLoading(true);
+      setTimeout(() => {
+        navigate(`/test/result`);
+      }, 3000);
     } else {
       navigate(`/test/${current + 1}`);
     }
   };
 
+  if (loading) return <LoadingAni />;
+
   return (
     <S.Background>
       <S.Header>
         <BrainIcon width={65} height={65} iconSize={35} icon={<Brain />} />
-        {current + 1}/{testLength}
+        {current + 1}/{mbtiData.length}
       </S.Header>
       <S.Question>{q.mbtiQuestion}</S.Question>
       <S.AnswerButton onClick={() => handleAnswerClick(q.yes)}>

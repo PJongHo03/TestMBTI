@@ -2,8 +2,6 @@ import Lottie from "lottie-react";
 import LodingAnimation from "../../assets/Flow4.json";
 import styled from "styled-components";
 
-type Props = { onComplete?: () => void };
-
 const Background = styled.div`
   background-color: #ffffff;
   width: 1000px;
