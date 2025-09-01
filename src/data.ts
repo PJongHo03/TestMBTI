@@ -4,7 +4,7 @@ type MbtiQuestionType = {
   no: string;
 };
 
-export const mbtiData = [
+export const mbtiData : MbtiQuestionType[] = [
   {
     mbtiQuestion: "여러사람이랑 대화하는 것을 즐긴다.",
     yes: "E",

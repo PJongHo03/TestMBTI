@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { ReactNode } from "react";
-import { icons } from "lucide-react";
 
 type BrainIconProps = {
   width: number;
