@@ -11,14 +11,36 @@ export default function ResultPage() {
 
   const resultInfo: mbtiInfo = mbti_Info[mbtiResult as MBTI];
 
-  console.log(resultInfo);
+  const [resultInfoCode, resultInfoTitle, resultInfoMessage, resultColor] = [
+    resultInfo.code,
+    resultInfo.title,
+    resultInfo.message,
+    resultInfo.color,
+  ];
 
   return (
-    <S.Background>
-      <BrainIcon width={60} height={60} icon={<Brain />} iconSize={40} />
-      <S.Section>
-        <S.SectionTitle>성격 분석</S.SectionTitle>
-      </S.Section>
-    </S.Background>
+    <>
+      <S.Background>
+        <BrainIcon width={60} height={60} icon={<Brain />} iconSize={40} />
+
+        <S.Section>
+          <S.ResultSection>
+            <S.ResultSpan>
+              <S.ResultCode color={resultInfo.color}>
+                {resultInfoCode}
+              </S.ResultCode>
+              <S.ResultTitle color={resultInfo.color}>
+                {resultInfoTitle}
+              </S.ResultTitle>
+            </S.ResultSpan>
+            <S.ResultMessage>{resultInfoMessage}</S.ResultMessage>
+          </S.ResultSection>
+
+          <S.SectionGraph>
+            <S.SectionTitle>성격 분석</S.SectionTitle>
+          </S.SectionGraph>
+        </S.Section>
+      </S.Background>
+    </>
   );
 }
