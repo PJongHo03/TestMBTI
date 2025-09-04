@@ -218,7 +218,7 @@ export const mbti_Info: Record<MBTI, mbtiInfo> = {
   ESFJ: {
     code: "ESFJ",
     title: "친선도모형",
-    message: "친절, 현실감을 바탕으로 타인에게 봉사",
+    message: "친절,현실감을 바탕으로 타인에게 봉사",
     color: "#F6C1D3",
   },
   ESTJ: {
