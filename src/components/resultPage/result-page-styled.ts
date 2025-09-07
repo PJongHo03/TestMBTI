@@ -36,6 +36,7 @@ export const SectionGraph = styled.div`
 export const ResultSection = styled.div`
   width: 400px;
   height: 100px;
+
   margin-left: 50px;
   margin-right: 64px;
   display: flex;
@@ -77,4 +78,16 @@ export const ResultMessage = styled.div`
   font-weight: bold;
   color: #878787;
 `;
-export const ResultButton = styled.button``;
+
+export const ReplayButton = styled.button`
+  font-size: 32px;
+  color: #ffffff;
+  width: 180px;
+  height: 50px;
+  margin-top: 22s0px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(to right, #8578f7, #3d9df6);
+  border-radius: 10px;
+`;

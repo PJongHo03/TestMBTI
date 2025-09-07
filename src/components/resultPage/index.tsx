@@ -34,6 +34,8 @@ export default function ResultPage() {
               </S.ResultTitle>
             </S.ResultSpan>
             <S.ResultMessage>{resultInfoMessage}</S.ResultMessage>
+
+            <S.ReplayButton>다시 하기</S.ReplayButton>
           </S.ResultSection>
 
           <S.SectionGraph>
