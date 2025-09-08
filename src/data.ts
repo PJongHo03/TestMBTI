@@ -27,6 +27,8 @@ type mbtiInfo = {
   title: string;
   message: string;
   color: string;
+  best: string;
+  worst: string;
 };
 
 export const mbtiData: MbtiQuestionType[] = [
@@ -136,95 +138,127 @@ export const mbti_Info: Record<MBTI, mbtiInfo> = {
     title: "잔다르크형",
     message: "이상적인 세상을 만들어가는 사람들",
     color: "#F3D6B6",
+    best : "ENFJ, ENTJ",
+    worst : "ESTJ, ESTP"
   },
   INTP: {
     code: "INTP",
     title: "아이디어형",
     message: "비평적인 관점을 가진 뛰어난 전략가",
     color: "#E7C7DE",
+    best : "ENTJ, ENFJ",
+    worst : "ESFJ, ESTJ"
   },
   INFJ: {
     code: "INFJ",
     title: "예언자형",
     message: "사람에 관한 뛰어난 통찰력을 가진사람",
     color: "#F9D4CC",
+    best :"ENFP, ENTP",
+    worst : "ESTP, ESFP"
   },
   INTJ: {
     code: "INTJ",
     title: "과학자형",
     message: "전체를 조합하여 비전을 제시하는 사람",
     color: "#E7F0D3",
+    best:"ENFP, ENTP",
+    worst: "ESFP, ESTP"
   },
   ENFP: {
     code: "ENFP",
     title: "스파크형",
     message: "열정적으로 새 관계를 만드는 사람",
     color: "#FCEEC9",
+    best:"INFJ, INTJ",
+    worst:"ISTJ, ISFJ"
   },
   ENTP: {
     code: "ENTP",
     title: "발명가형",
     message: "풍부한 상상력으로 새로운 것에 도전",
     color: "#C5DEE3",
+    best:"INFJ, INTJ",
+    worst: "ISFJ, ISTJ"
   },
   ENFJ: {
     code: "ENFJ",
     title: "언변능숙형",
     message: "타인의 성장을 도모하고 협동하는 사람",
     color: "#C9D2E1",
+    best:"INFP, INTP",
+    worst: "ISTP, ESTP"
   },
   ENTJ: {
     code: "ENTJ",
     title: "지도자형",
     message: "비전을 갖고 타인을 활력적으로 인도",
     color: "#F2CAB0",
+    best:"INTP, INFP",
+    worst: "ISFP, ESFP"
   },
   ISFP: {
     code: "ISFP",
     title: "성인군자형",
     message: "따듯한 감성을 가지고 있는 겸손한 사람",
     color: "#EDB7B7",
+    best:"ESFJ, ENFJ",
+    worst: "ENTJ, ESTJ"
   },
   ISTP: {
     code: "ISTP",
     title: "백과사전형",
     message: "논리적이고 뛰어난 상황 적응력",
     color: "#E1D8E9",
+    best:"ESTJ, ENTJ",
+    worst: "ENFJ, ESFJ"
   },
   ISFJ: {
     code: "ISFJ",
     title: "권력형",
     message: "성실하고 온화하며 협조를 잘하는 사람",
     color: "#BCE2E3",
+    best:"ESFP, ESTP",
+    worst: "ENTP, ENFP"
   },
   ISTJ: {
     code: "ISTJ",
     title: "소금형",
     message: "한번 시작한 일은 끝까지 해내는 성격",
     color: "#E2E4D7",
+    best:"ESTP, ESFP",
+    worst: "ENFP, ENTP"
   },
   ESFP: {
     code: "ESFP",
     title: "사교형",
     message: "분위기를 고조시키는 우호적인 성격",
     color: "#C9E5CF",
+    best:"ISFJ, ISTJ",
+    worst: "INTJ, INFJ"
   },
   ESTP: {
     code: "ESTP",
     title: "활동가형",
     message: "친구, 운동, 음식 등 다양함을 선호",
     color: "#C6E5F9",
+    best:"ISTJ, ISFJ",
+    worst: "INFJ, INTJ"
   },
   ESFJ: {
     code: "ESFJ",
     title: "친선도모형",
     message: "친절,현실감을 바탕으로 타인에게 봉사",
     color: "#F6C1D3",
+    best:"ISFP, INFP",
+    worst: "INTP, ISTP"
   },
   ESTJ: {
     code: "ESTJ",
     title: "사업가형",
     message: "사무적, 실용적, 현실적인 스타일",
     color: "#F0F3C6",
+    best:"ISTP, INTP",
+    worst: "INFP, ISFP"
   },
 };
