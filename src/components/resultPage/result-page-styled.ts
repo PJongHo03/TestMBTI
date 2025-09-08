@@ -68,12 +68,13 @@ export const ResultCode = styled.div<props>`
   margin-bottom: 12px;
 `;
 export const ResultTitle = styled.div<props>`
-  font-size: 32px;
+  font-size: 40px;
   color: ${({ color }) => color};
   font-weight: bold;
 `;
 
 export const ResultMessage = styled.div`
+  margin-top: 20px;
   font-size: 24px;
   font-weight: bold;
   color: #878787;
@@ -84,7 +85,7 @@ export const ReplayButton = styled.button`
   color: #ffffff;
   width: 180px;
   height: 50px;
-  margin-top: 22s0px;
+  margin-top: 28px;
   text-align: center;
   border: none;
   font-weight: bold;
@@ -94,9 +95,11 @@ export const ReplayButton = styled.button`
 
 export const BestMbti = styled.div`
   font-size: 24px;
+  margin-top: 20px;
   color: #878787;
 `;
 export const WorstMbti = styled.div`
   font-size: 24px;
+  margin-top: 12px;
   color: #878787;
 `;

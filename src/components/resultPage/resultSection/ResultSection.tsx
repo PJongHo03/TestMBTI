@@ -28,10 +28,9 @@ export default function ResultSection() {
   console.log(resultInfo.bestMbti);
   return (
     <S.ResultSection>
-      <S.ResultSpan>
-        <S.ResultCode color={resultColor}>{resultInfoCode}</S.ResultCode>
-        <S.ResultTitle color={resultColor}>{resultInfoTitle}</S.ResultTitle>
-      </S.ResultSpan>
+      <S.ResultCode color={resultColor}>{resultInfoCode}</S.ResultCode>
+      <S.ResultTitle color={resultColor}>{resultInfoTitle}</S.ResultTitle>
+
       <S.ResultMessage>{resultInfoMessage}</S.ResultMessage>
       <S.BestMbti>최고의 mbti 궁합 : {bestMbti}</S.BestMbti>
       <S.WorstMbti>최악의 mbti 궁합 : {worstMbti}</S.WorstMbti>
