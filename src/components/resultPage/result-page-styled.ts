@@ -91,3 +91,12 @@ export const ReplayButton = styled.button`
   background: linear-gradient(to right, #8578f7, #3d9df6);
   border-radius: 10px;
 `;
+
+export const BestMbti = styled.div`
+  font-size: 24px;
+  color: #878787;
+`;
+export const WorstMbti = styled.div`
+  font-size: 24px;
+  color: #878787;
+`;
