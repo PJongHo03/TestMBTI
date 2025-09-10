@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import * as S from "../result-page-styled";
-import { ContextMBTI } from "../../../store/mbti-context";
-import { mbti_Info } from "../../../data";
-import type { MBTI, mbtiInfo } from "../../../data";
+import * as S from "./result-page-styled";
+import { ContextMBTI } from "../../store/mbti-context";
+import { mbti_Info } from "../../data";
+import type { MBTI, mbtiInfo } from "../../data";
 
 export default function ResultSection() {
   const { mbtiResult } = useContext(ContextMBTI)!;

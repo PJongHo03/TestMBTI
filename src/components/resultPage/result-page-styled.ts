@@ -16,18 +16,15 @@ export const Section = styled.div`
   margin-top: 20px;
   display: flex;
 `;
-export const SectionTitle = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
-`;
 
 export const SectionGraph = styled.div`
   background-color: #ffffff;
   width: 450px;
   height: 380px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center; // 가로 가운데
+  align-items: center; // 세로 가운데
   border-radius: 10px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
   margin-bottom: 20px;
@@ -102,4 +99,34 @@ export const WorstMbti = styled.div`
   font-size: 24px;
   margin-top: 12px;
   color: #878787;
+`;
+
+export const Graph = styled.div`
+  border: 1px, solid, #b2b2b2;
+  border-radius: 10px;
+  width: 252px;
+  height: 16px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+export const GraphSpan = styled.span`
+  //조건 추가해서 왼쪽 오른쪽 입력값 분리 margin
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+`;
+
+export const GraphTitle = styled.h2`
+  font-size: 24px;
+  margin-bottom: 50px;
+  font-weight: bold;
+`;
+
+export const GraphGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  justify-content: center; // 가로 가운데
+  align-items: center; // 세로 가운데
 `;

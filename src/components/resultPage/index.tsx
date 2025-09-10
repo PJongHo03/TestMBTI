@@ -5,7 +5,8 @@ import BrainIcon from "../../icon/BrainIcon";
 import { mbti_Info } from "../../data";
 import type { MBTI, mbtiInfo } from "../../data";
 import { Brain } from "lucide-react";
-import ResultSection from "./resultSection/ResultSection";
+import ResultSection from "./ResultSection";
+import GraphSection from "./GraphSection";
 
 export default function ResultPage() {
   const { mbtiResult } = useContext(ContextMBTI)!;
@@ -18,10 +19,7 @@ export default function ResultPage() {
         <BrainIcon width={60} height={60} icon={<Brain />} iconSize={40} />
         <S.Section>
           <ResultSection />
-
-          <S.SectionGraph>
-            <S.SectionTitle>성격 분석</S.SectionTitle>
-          </S.SectionGraph>
+          <GraphSection />
         </S.Section>
       </S.Background>
     </>
