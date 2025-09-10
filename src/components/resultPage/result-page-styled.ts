@@ -102,11 +102,20 @@ export const WorstMbti = styled.div`
 `;
 
 export const Graph = styled.div`
-  border: 1px, solid, #b2b2b2;
+  border: 1px solid #b2b2b2;
   border-radius: 10px;
   width: 252px;
+  background-color: eee;
+  overflow: hidden;
   height: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+export const GraphBar = styled.div<{ value: number }>`
+  width: ${({ value }) => (value / 5) * 100}%;
+  background-color: #6aa6ff;
+  transition: width 1s ease;
+  height: 100%;
 `;
 
 export const GraphSpan = styled.span`
