@@ -1,3 +1,4 @@
+import { css } from "styled-components";
 import styled from "styled-components";
 
 export const Background = styled.div`
@@ -33,7 +34,6 @@ export const SectionGraph = styled.div`
 export const ResultSection = styled.div`
   width: 400px;
   height: 100px;
-
   margin-left: 50px;
   margin-right: 64px;
   display: flex;
@@ -74,7 +74,7 @@ export const ResultMessage = styled.div`
   margin-top: 20px;
   font-size: 24px;
   font-weight: bold;
-  color: #878787;
+  color: #000000;
 `;
 
 export const ReplayButton = styled.button`
@@ -105,17 +105,38 @@ export const Graph = styled.div`
   border: 1px solid #b2b2b2;
   border-radius: 10px;
   width: 252px;
-  background-color: eee;
+  background-color: #eee;
+  position: relative;
   overflow: hidden;
   height: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-export const GraphBar = styled.div<{ value: number }>`
-  width: ${({ value }) => (value / 5) * 100}%;
-  background-color: #6aa6ff;
+type graphProps = {
+  value: number;
+  color: string;
+};
+
+export const GraphBar = styled.div<graphProps>`
+  position: absolute;
+  background-color: ${({ color }) => color};
   transition: width 1s ease;
   height: 100%;
+
+  ${({ value }) => {
+    const v = Math.max(-4, Math.min(4, value));
+
+    const widthPct = (Math.abs(v) / 4) * 50;
+    return v < 0
+      ? css`
+          right: 50%;
+          width: ${widthPct}%;
+        `
+      : css`
+          left: 50%;
+          width: ${widthPct}%;
+        `;
+  }};
 `;
 
 export const GraphSpan = styled.span`
