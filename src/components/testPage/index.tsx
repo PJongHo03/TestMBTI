@@ -85,7 +85,7 @@ const TestPage: React.FC = () => {
 
     setScores(nextScore);
 
-    if (current >= 20) {
+    if (current >= 15) {
       handleMbtiResult(getMbtiString(scores));
       handleMbtiScores(scores);
       setLoading(true);
