@@ -8,7 +8,7 @@ export default function ResultPage() {
   return (
     <>
       <S.Background>
-        <BrainIcon width={60} height={60} icon={<Brain />} iconSize={40} />
+        <BrainIcon width={40} height={40} icon={<Brain />} iconSize={40} />
         <S.Section>
           <ResultSection />
           <GraphSection />
