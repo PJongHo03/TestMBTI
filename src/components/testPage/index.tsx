@@ -39,7 +39,8 @@ const letterToValue: Record<string, number> = {
 };
 
 const TestPage: React.FC = () => {
-  const { handleCheck, handleMbtiResult } = useContext(ContextMBTI)!;
+  const { handleCheck, handleMbtiResult, handleMbtiScores } =
+    useContext(ContextMBTI)!;
   const [current, setCurrent] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -84,8 +85,9 @@ const TestPage: React.FC = () => {
 
     setScores(nextScore);
 
-    if (current >= 20) {
+    if (current >= 15) {
       handleMbtiResult(getMbtiString(scores));
+      handleMbtiScores(scores);
       setLoading(true);
       setTimeout(() => {
         navigate(`/test/result`);

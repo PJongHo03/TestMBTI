@@ -1,13 +1,19 @@
-import { use, useContext } from "react";
 import * as S from "./result-page-styled";
-import { ContextMBTI } from "../../store/mbti-context";
+import BrainIcon from "../../icon/BrainIcon";
+import { Brain } from "lucide-react";
+import ResultSection from "./ResultSection";
+import GraphSection from "./GraphSection";
 
 export default function ResultPage() {
-  const { mbtiResult } = useContext(ContextMBTI)!;
-
   return (
-    <S.Background>
-      <h1>{mbtiResult}</h1>
-    </S.Background>
+    <>
+      <S.Background>
+        <BrainIcon width={60} height={60} icon={<Brain />} iconSize={40} />
+        <S.Section>
+          <ResultSection />
+          <GraphSection />
+        </S.Section>
+      </S.Background>
+    </>
   );
 }
