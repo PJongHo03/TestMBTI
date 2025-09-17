@@ -61,7 +61,6 @@ const TestPage: React.FC = () => {
     }
   }, [number, current, navigate]);
 
-
   const getMbtiString = (scores: score): string => {
     const { energy, information, decision, lifeStyle } = scores;
 
@@ -96,7 +95,6 @@ const TestPage: React.FC = () => {
     }
   };
 
-  
   if (loading) return <LoadingAni />;
 
   return (
