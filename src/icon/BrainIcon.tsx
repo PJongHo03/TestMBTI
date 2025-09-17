@@ -29,8 +29,8 @@ export const Circle = styled.div<CircleProps>`
 export const Icon = styled.div<IconBoxProps>`
   svg {
     display: block;
-    width: ${(porps) => porps.iconSize}px;
-    height: ${(porps) => porps.iconSize}px;
+    width: ${(props) => props.iconSize}px;
+    height: ${(props) => props.iconSize}px;
     color: #ffffff;
   }
 `;
